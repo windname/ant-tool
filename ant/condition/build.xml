@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="Ant Condition Example">
+    <target name="compileCountry" depends="compileCountry-check, compileCountry-fail" if="is-bg">
+        <echo message="EXECUTE BG" />
+    </target>
+
+    <target name="compileCountry-fail" unless="is-bg">
+        <echo message="SKIPPED BG" />
+    </target>
+
+    <target name="compileCountry-check">
+        <condition property="is-bg">
+            <equals arg1="${country}" arg2="BG" trim="true"/>
+        </condition>
+    </target>
+</project>
