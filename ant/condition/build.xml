@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project name="Ant Condition Example">
+<project name="Ant Condition Example" default="compileCountry">
     <target name="compileCountry" depends="compileCountry-check, compileCountry-fail" if="is-bg">
         <echo message="EXECUTE BG" />
     </target>
@@ -13,4 +13,13 @@
             <equals arg1="${country}" arg2="BG" trim="true"/>
         </condition>
     </target>
+
+
+	 <target name="parent"  unless="isChild">
+		<echo>Depends Test</echo>		
+	  </target>
+	  <!-- ant runChild -DisChild=true Even if isChild false we will execute parent target :( -->
+	  <target name="runChild" unless="isChild" depends="parent">
+		    <echo>Test</echo>
+	  </target>   
 </project>

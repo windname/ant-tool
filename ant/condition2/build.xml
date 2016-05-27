@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project name="Ant Condition Example">
+<!-- ant -Dcountry=bg parameter country help define what property file we will read and can customize target -->
+<project name="Ant Condition Example" default="compileCountry">
     <property name="country" value="default"/>
 
     <target name="compileCountry">
@@ -8,6 +9,5 @@
 	 </loadproperties>
         <echo message="${name}" />
     </target>
-
 
 </project>
