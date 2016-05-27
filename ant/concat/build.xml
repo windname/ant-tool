@@ -1,0 +1,18 @@
+<project name="Ant concat" default="doconcat" >
+    <!-- property name="country" value="true"/ -->
+
+
+    <target name="doconcat">
+		<concat destfile="1.properties" append="true">
+		    <filelist dir="." files="2.properties"/>
+		</concat>
+
+                <concat destfile="1.properties" append="true">
+			<fileset  dir="." casesensitive="no">
+				<filename name="aaa.properties"/>
+	       		</fileset>
+                </concat>
+
+
+    </target>
+</project>
