@@ -1,6 +1,5 @@
 <project name="Ant Condition jvmarg" default="helloWorld" xmlns:if="ant:if">
-    <!-- property name="country" value="hu"/-->
-
+    <!-- property name="country" value="true"/ -->
 	
 
     <target name="helloWorld">

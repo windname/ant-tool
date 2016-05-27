@@ -1,0 +1,16 @@
+<project name="Ant Condition jvmarg" default="getresource">
+
+<taskdef resource="net/sf/antcontrib/antlib.xml"/>
+
+<property name="countr" value="pl"/>
+
+<target name="getresource">
+			<if>
+			<equals arg1="${country}" arg2="PL" casesensitive="false" />
+				<then>
+					<property name="resources" value="616"/>
+				</then>
+			</if>
+		<echo>fiscal.resources=${resources}</echo>
+</target>
+</project>

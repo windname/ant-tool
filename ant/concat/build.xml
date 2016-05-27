@@ -9,10 +9,10 @@
 
                 <concat destfile="1.properties" append="true">
 			<fileset  dir="." casesensitive="no">
-				 <patternset> <include name="aaa.properties"/></patternset>
+				 <patternset> <include name="b.properties"/></patternset>
 	       		</fileset>
                 </concat>
-
+		<property file="running_servernode.properties"/>		
 
     </target>
 </project>
