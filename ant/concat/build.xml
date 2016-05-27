@@ -9,7 +9,7 @@
 
                 <concat destfile="1.properties" append="true">
 			<fileset  dir="." casesensitive="no">
-				<filename name="aaa.properties"/>
+				 <patternset> <include name="aaa.properties"/></patternset>
 	       		</fileset>
                 </concat>
 
